@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Flicker</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width initial-scale=1"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles768.css"/>
+    <link rel="stylesheet" href="css/styles992.css"/>
+    <link rel="stylesheet" href="css/styles1200.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;subset=hebrew" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--Left dashboard side-->
+
+            <aside class="leftSide">
+
+                <!--Logo-->
+
+                <div class="logoContainer">
+                    <div class="logo"><img src="img/flickerLogo.png"/></div>
+                </div>
+
+                <!--History container-->
+
+                <div class="historyContainer">
+
+                    <!--History title-->
+
+                    <h3 id="historyTitle" class="historyTitle">
+                        Search history
+                    </h3>
+
+                    <!--Display history btn-->
+
+                    <button id="clearHistoryBtn" class="clearHistoryBtn" type="button" value="" onclick="flicker.clearHistory()">Clear
+                    </button>
+
+                    <!--History list-->
+
+                    <table class="historyTable" id="historyTable">
+                        <tr id="historyTbody"></tr>
+                    </table>
+
+                    <!--No search history-->
+
+                    <div id="noSearchHistory" class="noSearchHistory">
+                        <div class="noSearchHistoryContent">
+                            <img src="img/noSearchHistory.png" height="137" width="137"/>
+                            <div class="noHistoryTitle">
+                                No search history
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!--Right dashboard side-->
+
+            <section class="mainSection">
+
+                <!--Top right dashboard-->
+
+                <div class="topDeshboard">
+
+                    <!--Term title-->
+
+                    <div class="topLeft">
+                        <h2 id="ResultsFor" class="searchTitle">Results for <span id="searchValue" class="searchValue"></span></h2>
+                    </div>
+
+                    <div class="topRight">
+
+                        <!--Main search-->
+
+                        <div class="searchBlockConatainer">
+                            <div class="searchBlock">
+                                <form name="mainSearch">
+                                    <input class="searchText" type="text" value="" id="searchTextValue"
+                                           name="searchterm"
+                                           placeholder="Search"/>
+                                    <button class="submit" id="searchImagesBtn" type="button" value=""
+                                            onclick="flicker.searchImages()"></button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!--User profile-->
+
+                        <div class="userProfile">
+                            <a class="linkProfile" href="https://github.com/uripaz9" target="_blank">
+                                <img src="img/myProfile.png" height="42" width="42"/>
+                                <span class="profileName">UriPaz</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--Main dashboard images list-->
+
+                <div class="mainDeshboard">
+                    <ul id="imagesList" class="imagesList"></ul>
+                </div>
+
+                <!--Empty image state-->
+
+                <div class="emptyImagesList" id="emptyImagesList">
+                    <div class="emptyImagesTitle">Search Something...</div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="scripts/scripts.js"></script>
+</body>
+</html>

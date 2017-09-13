@@ -1,0 +1,58 @@
+﻿@import '_elements';
+
+@media (min-width: @screen-md) {
+  .leftSide {
+    width: 33.33333333%;
+  }
+
+  .mainSection {
+    width: 66.66666667%;
+  }
+
+  .topDeshboard {
+    height: 180px;
+    padding: 0 40px;
+
+    .searchTitle {
+      line-height: 180px;
+    }
+
+    .topLeft {
+      padding-top: 0;
+    }
+
+    .topRight {
+      float: right;
+      height: 100%;
+      display: inline-block;
+      padding-top: 0;
+
+      .userProfile {
+        float: none;
+      }
+    }
+  }
+
+  .searchBlock {
+    .searchText {
+      width: 250px;
+    }
+  }
+
+  .searchBlockConatainer {
+    line-height: 180px;
+  }
+
+  .emptyImagesTitle {
+    &:before {
+      width: 344px;
+      background-size: 100%;
+    }
+  }
+
+  .imagesList {
+    li {
+      width: 50%;
+    }
+  }
+}

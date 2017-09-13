@@ -1,0 +1,369 @@
+﻿@import '_elements';
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  font-family: @font_Rubik;
+  line-height: 1.42857143;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* start reset*/
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  min-width: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button, a {
+  color: @colorGray;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a:focus,
+a:hover {
+  color: @colorGray;
+  text-decoration: none;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  .clearfix();
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  .clearfix();
+}
+
+img {
+  vertical-align: middle;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.leftSide {
+  background-color: @colorWhite;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  display: block;;
+}
+
+.mainSection {
+  background-color: @colorLightGray;
+  position: relative;
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+
+.imagesList {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 20px 20px 20px;
+  .clearfix();
+
+  li {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding: 20px;
+
+    figure {
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0px 10px 37px 2px rgba(0, 0, 0, 0.15);
+      margin: 0;
+
+      > div {
+        height: 265px;
+        overflow: hidden;
+        position: relative;
+
+        &:hover img {
+          -ms-transform: scale(1.04);
+          -webkit-transform: scale(1.04);
+          -moz-transform: scale(1.04);
+          -o-transform: scale(1.04);
+          transform: scale(1.04);
+        }
+
+      }
+      img {
+        width: 100%;
+        height: auto;
+        min-height: 265px;
+        -webkit-transition: all .4s linear;
+        -moz-transition: all .4s linear;
+        -o-transition: all .4s linear;
+        transition: all .4s linear;
+      }
+
+      figcaption {
+        font-size: 2.0rem;
+        background-color: @colorWhite;
+        margin: auto;
+        padding: 20px 15px 20px 60px;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          transform: translateY(-50%);
+          top: 50%;
+          left: 15px;
+          background: url("../img/userIcon.png") no-repeat center center;
+          width: 35px;
+          height: 35px;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          transform: translateY(-50%);
+          top: 50%;
+          right: 15px;
+          background: url("../img/loveIcon.png") no-repeat center center;
+          width: 17px;
+          height: 16px;
+        }
+
+        span {
+          display: block;
+          font-size: 1.2rem;
+          line-height: 18px;
+          height: 18px;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-right: 30px;
+        }
+
+        .imageTitle {
+          color: @colorDarkGray;
+        }
+
+        .imageAuthorId {
+          color: @colorGray;
+        }
+
+      }
+    }
+  }
+}
+
+.topDeshboard {
+  position: relative;
+  padding: 0 20px 40px 20px;
+
+  .topLeft {
+    display: inline-block;
+    padding-top: 30px;
+  }
+
+  .topRight {
+    display: block;
+    padding-top: 25px;
+
+    form {
+      display: inline-block;
+    }
+
+    .userProfile {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  .searchTitle {
+    font-size: 1.8rem;
+    color: @colorDarkGray;
+    font-weight: 100;
+
+    .searchValue {
+      color: @colorBlackGray;
+      font-weight: 500;
+    }
+  }
+}
+
+.searchBlockConatainer {
+  display: inline-block;
+}
+
+.searchBlock {
+  display: inline-block;
+  position: relative;
+  margin-right: 25px;
+
+  form {
+    margin: 0;
+    float: none;
+    position: relative;
+  }
+
+  .searchText {
+    width: 150px;
+    padding: 0 15px;
+    font-size: 1.4rem;
+    text-align: left;
+    border-radius: 50px;
+    border: none;
+    color: #f63e60;
+    height: 40px;
+    box-shadow: 0px 5px 37px 2px rgba(0, 0, 0, 0.10);
+    .placeholder(@colorGray);
+  }
+
+  .submit {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    .clearfix();
+
+    &:before {
+      content: "";
+      background: url(../img/searchIcon.png) no-repeat center center;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 0;
+      right: 0;
+    }
+  }
+}
+
+.linkProfile {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.profileName {
+  color: @colorBlackGray;
+  font-weight: 500;
+  padding-left: 6px;
+}
+
+.logoContainer {
+  .logo {
+    line-height: 80px;
+    padding-left: 20px;
+  }
+}
+
+.historyContainer {
+  padding: 0 20px 0 20px;
+  position: relative;
+  margin-top: 25px;
+}
+
+.historyTitle {
+  color: @colorGray;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.clearHistoryBtn {
+  position: absolute;
+  top: -3px;
+  right: 30px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid @colorRed;
+  color: @colorRed;
+}
+
+.historyTable {
+  width: 100%;
+  margin: 30px 0 30px;
+
+  tr {
+    line-height: 35px;
+  }
+
+  button {
+    color: @colorRed;
+  }
+}
+
+.emptyImagesList {
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  margin-top: 80px;
+}
+
+.emptyImagesTitle {
+  position: relative;
+  color: @colorGray;
+  text-transform: uppercase;
+  font-weight: 100;
+
+  &:before {
+    content: "";
+    background: url(../img/emptySearch.png) no-repeat center center;
+    width: 285px;
+    height: 127px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -135px;
+    background-size: 80%;
+  }
+}
+
+.noSearchHistoryContent {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+
+  .noHistoryTitle {
+    margin-top: 20px;
+    color: @colorGray;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+@media (min-width: 1200px) {
+  .leftSide {
+    width: 25%;
+  }
+  .mainSection {
+    width: 75%;
+  }
+  .imagesList li {
+    width: 33.33333333%;
+  }
+}

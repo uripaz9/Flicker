@@ -1,0 +1,40 @@
+@media (min-width: 992px) {
+  .leftSide {
+    width: 33.33333333%;
+  }
+  .mainSection {
+    width: 66.66666667%;
+  }
+  .topDeshboard {
+    height: 180px;
+    padding: 0 40px;
+  }
+  .topDeshboard .searchTitle {
+    line-height: 180px;
+  }
+  .topDeshboard .topLeft {
+    padding-top: 0;
+  }
+  .topDeshboard .topRight {
+    float: right;
+    height: 100%;
+    display: inline-block;
+    padding-top: 0;
+  }
+  .topDeshboard .topRight .userProfile {
+    float: none;
+  }
+  .searchBlock .searchText {
+    width: 250px;
+  }
+  .searchBlockConatainer {
+    line-height: 180px;
+  }
+  .emptyImagesTitle:before {
+    width: 344px;
+    background-size: 100%;
+  }
+  .imagesList li {
+    width: 50%;
+  }
+}

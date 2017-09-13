@@ -1,0 +1,47 @@
+//font family
+@font_Rubik: 'Rubik', sans-serif;
+
+//colors
+@colorGray: #adaeb0;
+@colorLightGray: #f1f5f8;
+@colorDarkGray: #5f6a70;
+@colorBlackGray: #2c3f46;
+@colorWhite: white;
+@colorRed: #f63e60;
+
+
+
+//media-size
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+@screen-xl: 1600px;
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
